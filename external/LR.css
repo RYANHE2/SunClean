@@ -1,0 +1,192 @@
+/* Form styles for login & register */
+:root { /*Applies when light mode is active*/
+    --base-color: white;
+    --reverse-base-color:rgb(32, 32, 36);
+    --base-variant: #e8e9ed;
+    --reverse-base-variant: rgb(36, 36, 41);
+    --search-bar-background: rgb(25, 140, 205);
+    --nav-text: white;
+    --white-color: white;
+    --text-color: black;
+    --reverse-text-color: white;
+    --primary-color: #3a435d;
+    --white-gray: white;
+    --light-variant: rgb(109, 184, 242);
+    --light-variant-only: rgb(109, 184, 242);
+    --dark-variant: rgb(25, 140, 205);
+    --dark-variant-only: rgb(25, 140, 205);
+    --darker-variant: rgb(20, 98, 143);
+    --reversed-darker-variant: rgb(75, 126, 165);
+    --dim-light: rgb(75, 126, 165);
+    --dim-dark: rgb(20, 98, 143);
+    --grayish-blue: #B0E0E6;
+    --logo-background: #e8e9ed;
+}
+.darkmode { /*Will apply when dark mode is activated*/
+    --base-color: rgb(32, 32, 36);
+    --reverse-base-color: white;
+    --base-variant: rgb(36, 36, 41);
+    --reverse-base-variant: #e8e9ed;
+    --search-bar-background: rgb(109, 184, 242);
+    --nav-text: white;
+    --white-color: white;
+    --black-color: black;
+    --text-color: white;
+    --reverse-text-color: black;
+    --primary-color: #3a435d;
+    --white-gray: gray;
+    --light-variant: rgb(25, 140, 205);
+    --light-variant-only: rgb(109, 184, 242);
+    --dark-variant: rgb(109, 184, 242);
+    --dark-variant-only: rgb(25, 140, 205);
+    --darker-variant: rgb(75, 126, 165);
+    --reversed-darker-variant: rgb(20, 98, 143);
+    --dim-light: rgb(75, 126, 165);
+    --dim-dark: rgb(20, 98, 143);
+    --grayish-blue: #B0E0E6;
+    --logo-background: #393f49;
+}
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*DARK MODE*/
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+#theme-switch svg {
+    cursor: pointer;
+    fill: var(--primary-color)
+}
+#theme-switch svg:last-child { 
+    display: none;
+}
+.darkmode #theme-switch svg:first-child {
+    display: none;
+}
+.darkmode #theme-switch svg:last-child {
+    display: block;
+}
+
+#darklogo {
+    display: none;
+}
+.darkmode #darklogo {
+    display: block;
+}
+.darkmode #lightlogo {
+    display: none;
+}
+#lightlogo {
+    display: block;
+}
+/*DARK MODE*/
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--base-variant);
+}
+
+.form-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background-color: var(--base-color);
+}
+
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--reverse-base-color);
+}
+.form-container form {
+  width: 100%;
+}
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container input[type="email"] {
+  color: var(--reverse-base-color);
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: var(--base-color);
+}
+
+.form-container button {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0;
+  background-color: var(--light-variant);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #1f6fbe;
+}
+
+.form-container p {
+  color: var(--reverse-base-color);
+  text-align: center;
+  margin-top: 15px;
+}
+
+.form-container a {
+  color: #2a8be1;
+  text-decoration: none;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}
+
+.form-container form a button {
+  margin-top: 10px; 
+}
+
+
+@media (max-width: 400px) {
+  .form-container {
+    width: 95vw;
+    padding: 15px;
+  }
+
+  .form-container h1 {
+    font-size: 20px;
+  }
+
+  .form-container input,
+  .form-container button {
+    font-size: 14px;
+  }
+}
+
